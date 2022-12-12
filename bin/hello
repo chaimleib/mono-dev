@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+exec mono `dirname "$0"`/../lib/mono-dev/hello.exe "$@"

@@ -11,12 +11,12 @@ brew install mono
 
 ## Running
 
-The `csc` command compiles to a `.exe` bytecode file. `mono` executes it.
+The `csc` command compiles to a `.exe` bytecode file. `bin/hello` uses `mono` to execute it.
 
 ```bash
 mkdir build
-csc src/hello.cs -out:build/hello.exe
-mono build/hello.exe
+csc src/hello.cs -out:lib/mono-dev/hello.exe
+bin/hello
 ```
 
 ## Plans
