@@ -9,14 +9,19 @@ On macOS, requires mono.
 brew install mono
 ```
 
-## Running
+## Build and Run
+### Makefile
+```bash
+make
+bin/hello
+```
 
-The `csc` command compiles to a `.exe` bytecode file. `bin/hello` uses `mono` to execute it.
+### Manual
+The `csc` command compiles to a `.exe` bytecode file. `mono` executes it.
 
 ```bash
-mkdir build
-csc src/hello.cs -out:lib/mono-dev/hello.exe
-bin/hello
+csc src/hello.cs -out:hello.exe
+mono hello.exe
 ```
 
 ## Plans
