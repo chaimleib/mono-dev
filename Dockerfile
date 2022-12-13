@@ -1,3 +1,4 @@
+# :latest has csc, required to compile
 FROM mono:latest AS builder
 WORKDIR /opt/app
 
@@ -11,5 +12,4 @@ FROM mono:slim
 WORKDIR /opt/app
 COPY --from=builder /opt/app/bin bin/
 COPY --from=builder /opt/app/lib/mono-dev lib/mono-dev/
-# CMD ls
 CMD ["bin/hello"]
