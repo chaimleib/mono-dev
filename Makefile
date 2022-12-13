@@ -14,7 +14,7 @@ $(EXE): $(SRC)
 clean:
 	rm -f lib/$(PROJ)/*.exe
 
-test: $(EXE) bin/$(TARGET)
+run: $(EXE) bin/$(TARGET)
 	@bin/$(TARGET)
 
 .PHONY: run build clean
