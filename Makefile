@@ -12,7 +12,7 @@ $(EXE): $(SRC)
 	csc $(SRC) -out:$(EXE)
 
 clean:
-	rm -f lib/$(PROJ)/*.exe
+	rm -rf lib
 
 run: $(EXE) bin/$(TARGET)
 	@bin/$(TARGET)
