@@ -17,4 +17,8 @@ clean:
 run: $(EXE) bin/$(TARGET)
 	@bin/$(TARGET)
 
-.PHONY: run build clean
+docker:
+	docker build -t mono-dev .
+	docker run -it --rm mono-dev
+
+.PHONY: run build clean docker
